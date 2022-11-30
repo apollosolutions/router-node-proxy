@@ -13,7 +13,8 @@ services:
       - ./src:/web/src
     command: yarn nodemon -L src/index.js
     depends_on:
-      - unleash
+      unleash:
+        condition: service_healthy
 
   router:
     image: ghcr.io/apollographql/router:v1.4.0

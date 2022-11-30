@@ -126,6 +126,7 @@ export async function routerProxyMiddleware(req, res, originalNext) {
     }
   };
 
+  // Ignore non-GraphQL requests (for sandbox, etc)
   if (!req.header("accept")?.includes("application/json")) {
     return next();
   }

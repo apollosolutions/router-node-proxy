@@ -2,6 +2,8 @@
 
 **The code in this repository is experimental and has been provided for reference purposes only. Community feedback is welcome but this project may not be supported in the same way that repositories in the official [Apollo GraphQL GitHub organization](https://github.com/apollographql) are. If you need help you can file an issue on this repository, [contact Apollo](https://www.apollographql.com/contact-sales) to talk to an expert, or create a ticket directly in Apollo Studio.**
 
+This repo demonstrates running both [`@apollo/gateway`](https://www.apollographql.com/docs/federation/api/apollo-gateway) and [Apollo Router](https://www.apollographql.com/docs/router/), and using the gateway Node.js server to conditionally proxy traffic to the router to support a gradual release strategy. It uses [Unleash](https://www.getunleash.io/) to demonstrate a somewhat-realistic feature toggle system.
+
 ## Run the demo
 
 1. Clone this repository
@@ -15,8 +17,6 @@
    ```sh
    docker compose up --build
    ```
-
-   The `node` service will fail to start because it can't connect to Unleash, but that can be ignored at this step.
 
 3. Create the feature toggles:
 
