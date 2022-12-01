@@ -1,0 +1,3 @@
+# yaml-language-server: $schema=router.config.json
+supergraph:
+  listen: 0.0.0.0:4000
