@@ -157,4 +157,4 @@ This repo demonstrates running both [`@apollo/gateway`](https://www.apollographq
 
 ## Limitations
 
-The "replay-on-error" functionality can't handle chunked responses, so it's incompatible with `@defer`. Make sure you disable the "replay-on-error" functionality before trying to use `@defer` in operations.
+- The "replay-on-error" functionality can't handle chunked responses, so it's incompatible with `@defer`.

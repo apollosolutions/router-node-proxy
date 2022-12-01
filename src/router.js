@@ -81,6 +81,11 @@ function streamResponse(routerResponse, clientResponse) {
  */
 async function isReplayable(response) {
   try {
+    // Do not try to parse chunked response (@defer)
+    if (response.headers.get("transfer-encoding")?.includes("chunked")) {
+      return false;
+    }
+
     const json = /** @type {import("graphql").ExecutionResult} */ (
       await response.clone().json()
     );
