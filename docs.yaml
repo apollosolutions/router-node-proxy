@@ -1,0 +1,9 @@
+name: router-node-proxy
+description: An example of how to run both @apollo/gateway and Apollo Router and
+  use the gateway Node.js server to conditionally proxy traffic to the router to
+  support a gradual release strategy. It uses Unleash to demonstrate a somewhat
+  realistic feature toggle system.
+tags:
+  - Migration
+  - Rotuer
+  - Gateway
